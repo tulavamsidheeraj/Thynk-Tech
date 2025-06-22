@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useState } from "react";
 
 const users = [
@@ -92,22 +92,37 @@ const FilterDocs = () => {
                     <div className="col-span-1">Resume</div>
                 </div>
                 <hr className="m-3 text-slate-300" />
-                {paginatedUsers.map((employee) => (
-                    <div key={employee.id} className="grid grid-cols-5 m-4 text-xl p-2 text-[#8F8F8F] roundedhover:text-white hover:bg-blue-900">
-                        <div className="col-span-1">{employee.name}</div>
-                        <div className='col-span-1'>EMP-{employee.id}</div>
-                        <div className={`col-span-1 font-medium ${employee.aadhar === "Uploaded" ? "text-green-600":employee.aadhar==="Missing"?"text-red-500":"text-yellow-500"}`}>{employee.aadhar}</div>
-                        <div className={`col-span-1 font-medium ${employee.pan === "Uploaded" ? "text-green-600":employee.pan==="Missing"?"text-red-500":"text-yellow-500"}`}>{employee.pan}</div>
-                        <div className={`col-span-1 font-medium ${employee.resume === "Uploaded" ? "text-green-600":employee.resume==="Missing"?"text-red-500":"text-yellow-500"}`}>{employee.resume}</div>
-                        </div>
-                    )
-                )}
-                {filteredUsers.length === 0 && (
-                    <div className="text-center text-gray-500 py-4">No matching leaves found.</div>
-                )}
-        </div>      
-      </div>
+                    {paginatedUsers.map((employee) => (
+                        <div key={employee.id} className="grid grid-cols-5 m-4 text-xl p-2 text-[#8F8F8F] roundedhover:text-white hover:bg-blue-900">
+                            <div className="col-span-1">{employee.name}</div>
+                            <div className='col-span-1'>EMP-{employee.id}</div>
+                            <div className={`col-span-1 font-medium ${employee.aadhar === "Uploaded" ? "text-green-600":employee.aadhar==="Missing"?"text-red-500":"text-yellow-500"}`}>{employee.aadhar}</div>
+                            <div className={`col-span-1 font-medium ${employee.pan === "Uploaded" ? "text-green-600":employee.pan==="Missing"?"text-red-500":"text-yellow-500"}`}>{employee.pan}</div>
+                            <div className={`col-span-1 font-medium ${employee.resume === "Uploaded" ? "text-green-600":employee.resume==="Missing"?"text-red-500":"text-yellow-500"}`}>{employee.resume}</div>
+                            </div>
+                        )
+                    )}
+                    {filteredUsers.length === 0 && (
+                        <div className="text-center text-gray-500 py-4">No matching leaves found.</div>
+                    )}
+                </div>      
+            </div>
+            <div className="flex justify-between items-center gap-2 py-4">
+                <div className="text-[#50555C] text-xl content-center">Showing {paginatedUsers.length} out of {users.length}</div>
+                <div>
+                    <button
+                    className="w-[130px] py-4 mr-1 bg-blue-900 text-xl text-white rounded disabled:bg-white disabled:text-[#50555C]"
+                    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                    >Previous</button>
 
+                    <button
+                    className="w-[130px] py-4 ml-1 bg-blue-900 text-xl text-white rounded disabled:bg-white disabled:text-[#50555C]"
+                    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                    disabled={currentPage===totalPages}
+                    >Next</button>
+                </div>
+            </div>
 
     </div>
   )

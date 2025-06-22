@@ -9,7 +9,7 @@ import Notifications from "./pages/Notifications"
 const App = () => {
   return (
     <div className='grid grid-cols-5'>
-      <BrowserRouter>
+      <BrowserRouter> 
         <SideBar className="col-span-1"></SideBar>
         <Routes>
           <Route exact path='/' element={<Dashboard/>}></Route>
