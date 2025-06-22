@@ -1,5 +1,5 @@
 
-const NotificationCard = ({user}) => {
+const NotificationCard = () => {
   return (
     <div className="bg-[#F4F7FA] rounded px-3 py-6 border-l-5 border-l-[#F4F7FA] hover:border-l-5 hover:border-l-blue-900 ">
 

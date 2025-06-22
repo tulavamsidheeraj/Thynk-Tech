@@ -72,8 +72,20 @@ const FilterNotif = () => {
             <div className="flex mx-4 my-5">
                 <div className="text-2xl">All Notifications</div>
             </div>
-            <div className="ml-6">Today</div>
-            <div>
+            <div className=" overflow-auto max-h-90">
+                <div className="ml-6">Today</div>
+                <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/>
+                <div className="ml-6 mt-10">Yesterday</div>
+                <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/>
                 <NotificationCard/>
             </div>      
       </div>
