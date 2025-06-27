@@ -72,7 +72,7 @@ const FilterNotif = () => {
             <div className="flex mx-4 my-5">
                 <div className="text-2xl">All Notifications</div>
             </div>
-            <div className=" overflow-auto max-h-90">
+            <div className=" overflow-auto max-h-screen scrollbar-hide">
                 <div className="ml-6">Today</div>
                 <NotificationCard/>
                 <NotificationCard/>

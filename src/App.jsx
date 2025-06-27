@@ -4,6 +4,7 @@ import { BrowserRouter,Route,Routes} from 'react-router-dom'
 import Directory from './pages/Directory'
 import Dashboard from './pages/Dashboard'
 import Leave from './pages/Leave'
+import EmployeeDetail from './pages/EmployeeDetail'
 import DocTracker from './pages/DocTracker'
 import Notifications from "./pages/Notifications"
 const App = () => {
@@ -13,10 +14,11 @@ const App = () => {
         <SideBar className="col-span-1"></SideBar>
         <Routes>
           <Route exact path='/' element={<Dashboard/>}></Route>
-          <Route path='/employee' element={<Directory/>}></Route>
-          <Route path='/leave' element={<Leave/>}></Route>
-          <Route path='/documents' element={<DocTracker/>}></Route>
-          <Route path='/notifications' element={<Notifications/>}></Route>
+          <Route path='employee' element={<Directory/>}></Route>
+          <Route path='employee/:empId' element={<EmployeeDetail/>}></Route>
+          <Route path='leave' element={<Leave/>}></Route>
+          <Route path='documents' element={<DocTracker/>}></Route>
+          <Route path='notifications' element={<Notifications/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

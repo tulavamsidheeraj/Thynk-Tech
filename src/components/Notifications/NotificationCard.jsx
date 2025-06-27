@@ -1,7 +1,7 @@
 
 const NotificationCard = () => {
   return (
-    <div className="bg-[#F4F7FA] rounded px-3 py-6 border-l-5 border-l-[#F4F7FA] hover:border-l-5 hover:border-l-blue-900 ">
+    <div className="bg-[#F4F7FA] rounded px-3 py-6 m-2 border-l-5 border-l-[#F4F7FA] hover:border-l-5 hover:border-l-blue-900 ">
 
         <div className="flex">
             <div className="rounded bg-blue-400 text-blue-900 px-4 py-[7px] text-xs">

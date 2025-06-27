@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import {Link} from "react-router-dom"
 const users = [
     { id: 1, name: "John Doe", email:"johndoe@company.com",department:"Engineering", role:"Intern",designation:"Software Engineer",joiningDate:"2024/12/01",status:"Active" },
     { id: 2, name: "Rachel Zane", email:"rzane@company.com",department:"HR", role:"Full Time",designation:"Partner",joiningDate:"2014/12/01",status:"Active" },
@@ -115,7 +115,7 @@ function Filter() {
                 </div>
                 <hr className="m-2 text-slate-500" />
                 {paginatedUsers.map((employee, i) => (
-                    <div key={employee.id} className="grid grid-cols-10 m-4 text-xl p-2 text-[#8F8F8F] rounded hover:text-white hover:bg-blue-900">
+                  <Link to={`/employee/${employee.id}`} key={employee.id} className="grid grid-cols-10 m-4 text-xl p-2 text-[#8F8F8F] rounded hover:text-white hover:bg-blue-900">
                         <div className="col-span-1">{employee.name}</div>
                         <div className="col-span-2">{employee.email}</div>
                         <div className="col-span-1">{employee.department}</div>
@@ -127,7 +127,7 @@ function Filter() {
                             <button className="h-md w-[100px] rounded text-white font-medium bg-[#0093AD]" type="button">Edit</button>
                             <button className="h-md w-[100px] rounded text-white font-medium bg-[#FF6B00]" type="button">Delete</button>
                         </div>
-                    </div>
+                    </Link>
                 ))}
                 {filteredUsers.length === 0 && (
                     <div className="text-center text-gray-500 py-4">No matching employees found.</div>
