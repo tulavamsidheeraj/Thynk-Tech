@@ -2,7 +2,7 @@ import React from 'react'
 
 const PersonalInformation = ({user}) => {
   return (
-    <div className='shadow-xl/20 rounded my-9 p-7'>
+    <div className='shadow-xl/20 rounded-xl my-9 p-7 bg-white'>
         <div className='text-2xl my-4'>Personal Information</div>
         <div className='grid grid-cols-3 gap-4'>
             <div>

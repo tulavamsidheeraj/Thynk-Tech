@@ -2,7 +2,7 @@ import React from 'react'
 
 const DocumentStatus = ({doc}) => {
   return (
-    <div className='shadow-xl/20 rounded my-9 p-7'>
+    <div className='shadow-xl/20 rounded-xl my-9 p-7 bg-white'>
         <div className='text-2xl '>
             Document Status
         </div>

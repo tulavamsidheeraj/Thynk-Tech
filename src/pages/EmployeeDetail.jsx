@@ -3,6 +3,8 @@ import TopBar from "../components/Dashboard/TopBar";
 import PersonalInformation from "../components/EmployeeDetail/PersonalInformation";
 import LeaveHistory from "../components/EmployeeDetail/LeaveHistory";
 import DocumentStatus from "../components/EmployeeDetail/DocumentStatus";
+import OngoingTasks from "../components/EmployeeDetail/OngoingTasks";
+import PerformanceNotes from "../components/EmployeeDetail/PerformanceNotes";
 const users = [
     { id: 1, name: "John Doe", email:"johndoe@company.com",department:"Engineering", role:"Intern",designation:"Software Engineer",joiningDate:"2024/12/01",status:"Active" },
     { id: 2, name: "Rachel Zane", email:"rzane@company.com",department:"HR", role:"Full Time",designation:"Partner",joiningDate:"2014/12/01",status:"Active" },
@@ -41,7 +43,11 @@ const documents=[{ id: 1, name: "John Doe",aadhar:"Uploaded",pan:"Pending",resum
     { id: 15, name: "Harvey Specter", aadhar:"Missing",pan:"Uploaded",resume:"Missing"}
 ]
 
-
+const tasks=[
+    {name:"Submitting the Document",status:"Completed"},
+    {name:"Meeting with new Clients for new project Discussion .",status:"Pending"},
+    {name:"Making Presentation for old clients meeting for HR.",status:"Completed"}
+]
 
 const EmployeeDetail = () => {
     const {empId}=useParams()
@@ -58,6 +64,8 @@ const EmployeeDetail = () => {
         <PersonalInformation user={user}/>
         <LeaveHistory leaves={leaves}></LeaveHistory>
         <DocumentStatus doc={doc}></DocumentStatus>
+        <OngoingTasks tasks={tasks}></OngoingTasks>
+        <PerformanceNotes></PerformanceNotes>
     </div>
   )
 }

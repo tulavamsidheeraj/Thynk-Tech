@@ -2,7 +2,7 @@ import React from 'react'
 
 const LeaveHistory = ({leaves}) => {
   return (
-    <div className='shadow-xl/20 rounded my-9 p-7'>
+    <div className='shadow-xl/20 rounded-xl my-9 p-7 bg-white'>
         <div className='flex justify-between'>
             <div className='text-2xl'>Leave History</div>
             <div className='border border-slate-400 rounded p-1'>
